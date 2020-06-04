@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 2693.0, 79.0, 640.0, 480.0 ],
+		"rect" : [ 2528.0, 79.0, 741.0, 948.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,61 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 46.96429032087326, 384.0, 235.0, 22.0 ],
+					"text" : "jit.gl.gridshape CONTEXT @shape sphere"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 4,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 46.96429032087326, 329.127870261669159, 367.0, 22.0 ],
+					"text" : "jit.gl.multiple CONTEXT 4 @glparams position rotatexyz scale color"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 56.5, 196.690059959888458, 209.0, 22.0 ],
+					"text" : "jit.expr @exp norm[0]*2-1 * 100 150 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 129.0, 121.0, 115.0, 22.0 ],
+					"text" : "jit.noise 4 float32 50"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"comment" : "",
 					"id" : "obj-7",
 					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 155.0, 339.0, 30.0, 30.0 ]
+					"patching_rect" : [ 155.0, 481.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -69,7 +117,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 176.0, 121.0, 22.0 ],
+					"patching_rect" : [ 108.0, 758.0, 121.0, 22.0 ],
 					"text" : "torque_impulse 1 1 1"
 				}
 
@@ -81,7 +129,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 155.0, 118.0, 58.0, 22.0 ],
+					"patching_rect" : [ 238.0, 700.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -93,7 +141,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 254.0, 176.0, 80.0, 22.0 ],
+					"patching_rect" : [ 337.0, 758.0, 80.0, 22.0 ],
 					"text" : "impulse 3 3 0"
 				}
 
@@ -105,7 +153,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 155.0, 176.0, 84.0, 22.0 ],
+					"patching_rect" : [ 238.0, 758.0, 84.0, 22.0 ],
 					"text" : "impulse -3 3 0"
 				}
 
@@ -119,7 +167,7 @@
 					"numinlets" : 8,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 19.0, 221.0, 100.0, 23.0 ],
+					"patching_rect" : [ 102.0, 803.0, 100.0, 23.0 ],
 					"text" : "jit.gl.material"
 				}
 
@@ -133,7 +181,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 155.0, 226.0, 422.0, 23.0 ],
+					"patching_rect" : [ 238.0, 808.0, 422.0, 23.0 ],
 					"text" : "jit.phys.body @shape sphere @restitution 1 @damping 0. 0. @friction 0"
 				}
 
@@ -147,7 +195,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 155.0, 261.0, 188.0, 23.0 ],
+					"patching_rect" : [ 238.0, 843.0, 188.0, 23.0 ],
 					"text" : "jit.gl.gridshape @shape sphere"
 				}
 
@@ -162,8 +210,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"source" : [ "obj-106", 0 ]
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -190,6 +238,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"source" : [ "obj-45", 0 ]
 				}
@@ -197,7 +252,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-72", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -215,6 +270,29 @@
 					"destination" : [ "obj-38", 0 ],
 					"order" : 0,
 					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 2 ],
+					"order" : 0,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 1 ],
+					"order" : 1,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}

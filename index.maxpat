@@ -39,42 +39,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 744.0, 440.0, 121.0, 22.0 ],
-					"text" : "torque_impulse 5 5 5"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-45",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 973.0, 440.0, 80.0, 22.0 ],
-					"text" : "impulse 3 3 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-38",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 874.0, 440.0, 84.0, 22.0 ],
-					"text" : "impulse -3 3 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-25",
 					"maxclass" : "button",
 					"numinlets" : 1,
@@ -127,8 +91,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 876.0, 34.0, 22.0 ],
-					"text" : "pack"
+					"patching_rect" : [ 29.0, 880.0, 61.0, 22.0 ],
+					"text" : "pack 0. 0."
 				}
 
 			}
@@ -235,7 +199,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 905.0, 104.0, 22.0 ],
+					"patching_rect" : [ 29.0, 911.0, 104.0, 22.0 ],
 					"text" : "position $1 $2 -10"
 				}
 
@@ -259,7 +223,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 128.0, 455.0, 153.0, 33.0 ],
+					"patching_rect" : [ 72.5, 412.0, 153.0, 33.0 ],
 					"text" : "Imports Walls and Ceilings from seperate file"
 				}
 
@@ -270,8 +234,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 29.0, 412.0, 153.0, 22.0 ],
-					"text" : "wallsAndFloorsAndLighting"
+					"patching_rect" : [ 29.0, 412.0, 35.0, 22.0 ],
+					"text" : "walls"
 				}
 
 			}
@@ -688,22 +652,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-38", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-45", 0 ]
 				}
 
 			}
@@ -837,7 +787,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "wallsAndFloorsAndLighting.maxpat",
+				"name" : "walls.maxpat",
 				"bootpath" : "~/Documents/Responsive-Spaces-Y2TERM3/Max-II",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
